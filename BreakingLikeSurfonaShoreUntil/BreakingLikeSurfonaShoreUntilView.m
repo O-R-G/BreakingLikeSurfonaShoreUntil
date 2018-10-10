@@ -35,7 +35,13 @@
     [super drawRect:rect];
     
     NSColor *color;
+    NSRect screenRect;
     NSSize boxSize = NSMakeSize( size.height / 150 , size.height / 150 );
+    
+    screenRect.size = NSMakeSize( size.width, size.height );
+    color = [NSColor colorWithCalibratedRed:0.0 green:0.0 blue:1.0 alpha:1.0];
+    [color set];
+    NSRectFill(screenRect);
     
     // Draw boxes
     NSUInteger index = 0;
